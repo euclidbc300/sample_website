@@ -1,10 +1,16 @@
 .nav-menu {
 	text-align: right;
+
+	a {
+		text-decoration: none;
+		color: #0000ee;
+	}
 }
-.nav-menu a {
-	text-decoration: none;
-	color: #0000ee;
-}
+
 .nav-spacing {
 	margin: 0 0 0 10px;
+}
+
+.image-link {
+	text-decoration: none;
 }

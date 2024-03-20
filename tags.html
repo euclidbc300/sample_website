@@ -3,13 +3,14 @@
   <head>
     <title>HTMLタグ一覧</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
-    <div style="text-align: right;">
-      <a href="index.html" style="text-decoration: none; color: #0000ee;">homeページ</a>
-      <a href="tags.html"style="margin: 0 0 0 10px; text-decoration: none; color: #0000ee;">HTMLタグ一覧</a>
-      <a href="moby_dick.html" style="margin: 0 0 0 10px; text-decoration: none; color: #0000ee;">読書案内『Moby Dick』</a>
+    <div id="main-nav" class="nav-menu">
+      <a href="index.html">homeページ</a>
+      <a href="tags.html" class="nav-spacing">HTMLタグ一覧</a>
+      <a href="moby_dick.html" class="nav-spacing">読書案内『Moby Dick』</a>
     </div>
 
     <h1>重要なHTMLタグ一覧</h1>
@@ -29,7 +30,7 @@
       以下のテーブルに含まれるHTMLタグは全体の一部に過ぎませんが、重要なHTMLについてはここで参照できます。
     </p>
 
-    <h2>ブロック要素（block element）</h2>
+    <h2>ブロックレベルタグ</h2>
 
     <table>
       <tr>
@@ -40,61 +41,71 @@
       <tr>
         <td><code>h1</code>&ndash;<code>h6</code></td>
         <td>見出し（heading）</td>
-        <td>この中に見出しを置く（レベル: 1&ndash;6）</td>
+        <td>見出し文を囲む（レベル1〜6）</td>
       </tr>
       <tr>
         <td><code>p</code></td>
-        <td>段落（パラグラフ: paragraph）</td>
-        <td>この中に文章を入れる</td>
+        <td>パラグラフ（paragraph）</td>
+        <td>テキストのパラグラフを囲む</td>
       </tr>
       <tr>
         <td><code>table</code></td>
-        <td>表（テーブル: table）</td>
-        <td>この中にテーブルを置く</td>
+        <td>テーブル</td>
+        <td>表を囲む</td>
       </tr>
       <tr>
         <td><code>tr</code></td>
-        <td>表の行（table row）</td>
-        <td>この中に行データを置く</td>
+        <td>テーブル行（table row）</td>
+        <td>行データを囲む</td>
       </tr>
       <tr>
         <td><code>th</code></td>
-        <td>表の見出し（table header）</td>
-        <td>この中に表の見出しを置く</td>
+        <td>テーブルヘッダー（table header）</td>
+        <td>テーブルヘッダーを記述する</td>
       </tr>
       <tr>
         <td><code>td</code></td>
-        <td>表のデータ（table data）</td>
-        <td>この中に表のセルデータを置く</td>
-      </tr>
-      <tr>
-        <td><code>header</code></td>
-        <td>見出し（header）</td>
-        <td>この要素のコンテンツは見出しを表す</td>
+        <td>テーブルデータ（table data）</td>
+        <td>テーブルデータのセルを囲む</td>
       </tr>
       <tr>
         <td><code>div</code></td>
-        <td>分割（division）</td>
-        <td>ブロックレベル要素としてグループ化する</td>
+        <td>ディビジョン（division: 区画）</td>
+        <td>ドキュメント内にブロックレベルのセクションを定義する</td>
+      </tr>
+      <tr>
+        <td><code>header</code></td>
+        <td>ヘッダー</td>
+        <td>ページのヘッダーを表示する</td>
       </tr>
       <tr>
         <td><code>ol</code></td>
         <td>順序付きリスト（ordered list）</td>
-        <td>順序のある番号付きのリストを表示する</td>
+        <td>番号順に表示されるリスト要素</td>
       </tr>
       <tr>
         <td><code>ul</code></td>
         <td>順序なしリスト（unordered list）</td>
-        <td>順序がない箇条書きのリストを表示する</td>
+        <td>順序が重要でないリスト要素</td>
       </tr>
       <tr>
         <td><code>li</code></td>
         <td>リストの項目（list item）</td>
-        <td>ul、ol、dir、menu要素の子要素</td>
+        <td>リスト項目を囲む（olとulのどちらにも使う）</td>
+      </tr>
+      <tr>
+        <td><code>blockquote</code></td>
+        <td>ブロッククォート（block quotation）</td>
+        <td>フォーマット済み引用表示</td>
+      </tr>
+      <tr>
+        <td>br</td>
+        <td>改行（break）</td>
+        <td>改行する</td>
       </tr>
     </table>
 
-    <h2>インライン要素（inline element）</h2>
+    <h2>インラインタグ</h2>
 
     <table>
       <tr>
@@ -106,57 +117,47 @@
       </tr>
       <tr>
         <td><code>em</code></td>
-        <td>軽い強調（emphasized）</td>
+        <td>軽い強調（emphasize）</td>
         <td>テキストを軽く強調する</td>
-        <td><code>技術の成熟（&lt;em&gt;technical sophistication&lt;/em&gt;）</code></td>
-        <td>技術の成熟（<em>technical sophistication</em>）</td>
+        <td><code>&lt;em&gt;技術の成熟&lt;/em&gt;</code></td>
+        <td><em>技術の成熟</em></td>
       </tr>
       <tr>
         <td><code>strong</code></td>
         <td>強調（strong）</td>
         <td>テキストを強調する</td>
-        <td>
-          <code>&lt;strong&gt;少なくとも10億人&lt;/strong&gt;</code>
-        </td>
+        <td><code>&lt;strong&gt;少なくとも10億人&lt;/strong&gt;</code></td>
         <td><strong>少なくとも10億人</strong></td>
       </tr>
       <tr>
         <td><code>a</code></td>
         <td>アンカー（anchor）</td>
-        <td>ハイパーリンクにする</td>
-        <td>
-          <code>
-            &lt;a href="https://learnenough.com/"&gt;Learn Enough&lt;/a&gt;
-          </code>
-        </td>
+        <td>ハイパーリンクを作成する</td>
+        <td><code>&lt;a href="#"&gt;Learn Enough&lt;/a&gt;</code></td>
         <td><a href="https://learnenough.com/">Learn Enough</a></td>
       </tr>
       <tr>
         <td><code>img</code></td>
         <td>画像（image）</td>
-        <td>画像を配置する</td>
-        <td>
-          <code>
-            &lt;img src="https://bit.ly/1MZAFuQ" alt="Michael Hartl"&gt;
-          </code>
-        </td>
+        <td>画像を囲む</td>
+        <td><code>&lt;img src="mhartl.jpg" alt="Michael Hartl"&gt;</code></td>
         <td><img src="https://bit.ly/1MZAFuQ" alt="Michael Hartl"></td>
       </tr>
       <tr>
         <td><code>code</code></td>
-        <td>コード（code）</td>
-        <td>プログラムコードやその他のコードを示す</td>
-        <td><code>&lt;code&gt;somefunction()&lt;code&gt;</code></td>
-        <td><code>somefunction()</code></td>
+        <td>コード</td>
+        <td>ソースコードとして整形する</td>
+        <td><code>&lt;code&gt;table&lt;code&gt;</code></td>
+        <td><code>table</code></td>
       </tr>
       <tr>
         <td><code>span</code></td>
-        <td>スパン（span）</td>
-        <td>インライン要素としてグループ化する</td>
+        <td>スパン</td>
+        <td>ドキュメントのインラインセクションを定義する</td>
         <td>
-          <code>&lt;span style="color:red"&gt;赤色&lt;/span&gt;で表示</code>
+          <code>&lt;span&gt;イシュマエルと呼んでくれ。&lt;/span&gt;</code>
         </td>
-        <td><span><span style="color:red">赤色</span>で表示</span></td>
+        <td><span>イシュマエルと呼んでくれ。</span></td>
       </tr>
     </table>
 
